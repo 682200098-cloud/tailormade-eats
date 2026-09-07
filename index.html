@@ -112,15 +112,15 @@
             <form id="feedbackForm" onsubmit="submitFeedback(event)">
                 <div class="form-group">
                     <label>ชื่อ-นามสกุล</label>
-                    <input type="text" id="fb-name" required placeholder="คุณลูกค้า">
+                    <input type="text" id="fb-name" required name="name" placeholder="คุณลูกค้า">
                 </div>
                 <div class="form-group">
                     <label>อีเมล หรือ เบอร์โทร (สำหรับติดต่อกลับ)</label>
-                    <input type="text" id="fb-contact" required placeholder="email@example.com">
+                    <input type="text" id="fb-contact" required name="contact" placeholder="email@example.com">
                 </div>
                 <div class="form-group">
                     <label>วัตถุดิบที่อยากให้ร้านนำเข้ามาเพิ่ม / ข้อเสนอแนะอื่นๆ</label>
-                    <textarea id="fb-message" rows="5" required placeholder="เช่น อยากให้มีเส้นบุก, อยากให้มีเนื้อนกกระจอกเทศ..."></textarea>
+                    <textarea id="fb-message" rows="5" required name="message" placeholder="เช่น อยากให้มีเส้นบุก, อยากให้มีเนื้อนกกระจอกเทศ..."></textarea>
                 </div>
                 <button type="submit" class="btn-submit" id="btn-submit-fb">ส่งข้อเสนอแนะ</button>
                 <p id="fb-status" style="margin-top: 10px; text-align: center; color: var(--color-5); display: none;"></p>
@@ -168,81 +168,81 @@
                 category: "ผัดกะเพรา (Basil Stir-fry)",
                 items: [
                     { id: "k1", name: "กะเพราหมูสับ", basePrice: 50, baseCal: 450, img: "https://images.unsplash.com/photo-1626804475297-41609ea0eb4eb?auto=format&fit=crop&w=500" },
-                    { id: "k2", name: "กะเพราหมูชิ้น", basePrice: 55, baseCal: 420, img: "https://images.unsplash.com/photo-1626804475297-41609ea0eb4eb?auto=format&fit=crop&w=500" },
-                    { id: "k3", name: "กะเพราไก่กรอบ", basePrice: 60, baseCal: 550, img: "https://images.unsplash.com/photo-1626804475297-41609ea0eb4eb?auto=format&fit=crop&w=500" },
-                    { id: "k4", name: "กะเพราเนื้อวากิวสับ", basePrice: 120, baseCal: 500, img: "https://images.unsplash.com/photo-1626804475297-41609ea0eb4eb?auto=format&fit=crop&w=500" }
+                    { id: "k2", name: "กะเพราหมูชิ้น", basePrice: 55, baseCal: 420, img: "" }, // รอใส่ลิงก์รูปกะเพราหมูชิ้น
+                    { id: "k3", name: "กะเพราไก่กรอบ", basePrice: 60, baseCal: 550, img: "" }, // รอใส่ลิงก์รูปกะเพราไก่กรอบ
+                    { id: "k4", name: "กะเพราเนื้อวากิวสับ", basePrice: 120, baseCal: 500, img: "" } // รอใส่ลิงก์รูปกะเพราเนื้อวากิว
                 ]
             },
             {
                 category: "ส้มตำ (Papaya Salad)",
                 items: [
                     { id: "s1", name: "ส้มตำไทย", basePrice: 45, baseCal: 120, img: "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=500" },
-                    { id: "s2", name: "ส้มตำปูปลาร้า", basePrice: 50, baseCal: 130, img: "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=500" },
-                    { id: "s3", name: "ตำข้าวโพดไข่เค็ม", basePrice: 65, baseCal: 250, img: "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=500" }
+                    { id: "s2", name: "ส้มตำปูปลาร้า", basePrice: 50, baseCal: 130, img: "" }, // รอใส่ลิงก์รูปส้มตำปูปลาร้า
+                    { id: "s3", name: "ตำข้าวโพดไข่เค็ม", basePrice: 65, baseCal: 250, img: "" } // รอใส่ลิงก์รูปตำข้าวโพดไข่เค็ม
                 ]
             },
             {
                 category: "เมนูผัด (Stir-fried)",
                 items: [
-                    { id: "p1", name: "ผัดกระเทียมพริกไทย", basePrice: 50, baseCal: 400, img: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=500" },
-                    { id: "p2", name: "ผัดพริกแกง", basePrice: 55, baseCal: 450, img: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=500" },
-                    { id: "p3", name: "ผัดผักรวมมิตร", basePrice: 45, baseCal: 200, img: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=500" }
+                    { id: "p1", name: "ผัดกระเทียมพริกไทย", basePrice: 50, baseCal: 400, img: "" }, // รอใส่ลิงก์รูปผัดกระเทียมพริกไทย
+                    { id: "p2", name: "ผัดพริกแกง", basePrice: 55, baseCal: 450, img: "" }, // รอใส่ลิงก์รูปผัดพริกแกง
+                    { id: "p3", name: "ผัดผักรวมมิตร", basePrice: 45, baseCal: 200, img: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=500" } // ผัดผัก
                 ]
             },
             {
                 category: "เมนูแกง (Curries)",
                 items: [
                     { id: "c1", name: "แกงเขียวหวาน", basePrice: 60, baseCal: 350, img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=500" },
-                    { id: "c2", name: "แกงเผ็ดเป็ดย่าง", basePrice: 80, baseCal: 400, img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=500" },
-                    { id: "c3", name: "พะแนงหมู", basePrice: 60, baseCal: 380, img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=500" }
+                    { id: "c2", name: "แกงเผ็ดเป็ดย่าง", basePrice: 80, baseCal: 400, img: "" }, // รอใส่ลิงก์รูปแกงเผ็ดเป็ดย่าง
+                    { id: "c3", name: "พะแนงหมู", basePrice: 60, baseCal: 380, img: "" } // รอใส่ลิงก์รูปพะแนงหมู
                 ]
             },
             {
                 category: "ข้าวผัด (Fried Rice)",
                 items: [
                     { id: "f1", name: "ข้าวผัดหมู/ไก่", basePrice: 50, baseCal: 500, img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=500" },
-                    { id: "f2", name: "ข้าวผัดกุ้ง", basePrice: 65, baseCal: 480, img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=500" },
-                    { id: "f3", name: "ข้าวผัดต้มยำทะเล", basePrice: 75, baseCal: 520, img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=500" }
+                    { id: "f2", name: "ข้าวผัดกุ้ง", basePrice: 65, baseCal: 480, img: "" }, // รอใส่ลิงก์รูปข้าวผัดกุ้ง
+                    { id: "f3", name: "ข้าวผัดต้มยำทะเล", basePrice: 75, baseCal: 520, img: "" } // รอใส่ลิงก์รูปข้าวผัดต้มยำ
                 ]
             },
             {
                 category: "เมนูเส้น (Noodles)",
                 items: [
-                    { id: "n1", name: "ผัดซีอิ๊ว", basePrice: 50, baseCal: 550, img: "https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=500" },
-                    { id: "n2", name: "ราดหน้า", basePrice: 50, baseCal: 450, img: "https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=500" },
-                    { id: "n3", name: "สุกี้แห้ง/น้ำ", basePrice: 55, baseCal: 300, img: "https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=500" }
+                    { id: "n1", name: "ผัดซีอิ๊ว", basePrice: 50, baseCal: 550, img: "https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=500" }, // รูปผัดเส้น
+                    { id: "n2", name: "ราดหน้า", basePrice: 50, baseCal: 450, img: "" }, // รอใส่ลิงก์รูปราดหน้า
+                    { id: "n3", name: "สุกี้แห้ง/น้ำ", basePrice: 55, baseCal: 300, img: "" } // รอใส่ลิงก์รูปสุกี้
                 ]
             },
             {
                 category: "ต้มยำ / แกงจืด (Soups)",
                 items: [
                     { id: "t1", name: "ต้มยำกุ้งน้ำข้น", basePrice: 80, baseCal: 250, img: "https://images.unsplash.com/photo-1548943487-a2e4b43b4859?auto=format&fit=crop&w=500" },
-                    { id: "t2", name: "ต้มแซ่บกระดูกอ่อน", basePrice: 70, baseCal: 300, img: "https://images.unsplash.com/photo-1548943487-a2e4b43b4859?auto=format&fit=crop&w=500" },
-                    { id: "t3", name: "แกงจืดเต้าหู้หมูสับ", basePrice: 50, baseCal: 150, img: "https://images.unsplash.com/photo-1548943487-a2e4b43b4859?auto=format&fit=crop&w=500" }
+                    { id: "t2", name: "ต้มแซ่บกระดูกอ่อน", basePrice: 70, baseCal: 300, img: "" }, // รอใส่ลิงก์รูปต้มแซ่บ
+                    { id: "t3", name: "แกงจืดเต้าหู้หมูสับ", basePrice: 50, baseCal: 150, img: "" } // รอใส่ลิงก์รูปแกงจืด
                 ]
             },
             {
                 category: "เมนูยำ (Spicy Salads)",
                 items: [
-                    { id: "y1", name: "ยำวุ้นเส้นโบราณ", basePrice: 60, baseCal: 200, img: "https://images.unsplash.com/photo-1509404285854-4360e28f11d1?auto=format&fit=crop&w=500" },
-                    { id: "y2", name: "ยำหมูยอไข่แดงเค็ม", basePrice: 80, baseCal: 350, img: "https://images.unsplash.com/photo-1509404285854-4360e28f11d1?auto=format&fit=crop&w=500" },
-                    { id: "y3", name: "หมูมะนาว", basePrice: 70, baseCal: 280, img: "https://images.unsplash.com/photo-1509404285854-4360e28f11d1?auto=format&fit=crop&w=500" }
+                    { id: "y1", name: "ยำวุ้นเส้นโบราณ", basePrice: 60, baseCal: 200, img: "" }, // รอใส่ลิงก์รูปยำวุ้นเส้น
+                    { id: "y2", name: "ยำหมูยอไข่แดงเค็ม", basePrice: 80, baseCal: 350, img: "" }, // รอใส่ลิงก์รูปยำหมูยอ
+                    { id: "y3", name: "หมูมะนาว", basePrice: 70, baseCal: 280, img: "" } // รอใส่ลิงก์รูปหมูมะนาว
                 ]
             },
             {
                 category: "ของทอด (Fried Sides)",
                 items: [
-                    { id: "fr1", name: "หมูสามชั้นทอดน้ำปลา", basePrice: 80, baseCal: 600, img: "https://images.unsplash.com/photo-1627065977501-83141f021e84?auto=format&fit=crop&w=500" },
-                    { id: "fr2", name: "ปีกไก่ทอดเกลือ", basePrice: 70, baseCal: 450, img: "https://images.unsplash.com/photo-1627065977501-83141f021e84?auto=format&fit=crop&w=500" },
-                    { id: "fr3", name: "ทอดมันกุ้ง", basePrice: 90, baseCal: 400, img: "https://images.unsplash.com/photo-1627065977501-83141f021e84?auto=format&fit=crop&w=500" }
+                    { id: "fr1", name: "หมูสามชั้นทอดน้ำปลา", basePrice: 80, baseCal: 600, img: "https://images.unsplash.com/photo-1627065977501-83141f021e84?auto=format&fit=crop&w=500" }, // รูปหมูทอด
+                    { id: "fr2", name: "ปีกไก่ทอดเกลือ", basePrice: 70, baseCal: 450, img: "" }, // รอใส่ลิงก์รูปปีกไก่ทอด
+                    { id: "fr3", name: "ทอดมันกุ้ง", basePrice: 90, baseCal: 400, img: "" } // รอใส่ลิงก์รูปทอดมันกุ้ง
                 ]
             },
             {
                 category: "เครื่องดื่ม (Beverages)",
                 items: [
-                    { id: "b1", name: "ชานมเย็น (คีโต)", basePrice: 45, baseCal: 50, img: "https://images.unsplash.com/photo-1558857563-b37102e99e00?auto=format&fit=crop&w=500" },
-                    { id: "b2", name: "น้ำเก๊กฮวยหญ้าหวาน", basePrice: 30, baseCal: 10, img: "https://images.unsplash.com/photo-1558857563-b37102e99e00?auto=format&fit=crop&w=500" },
-                    { id: "b3", name: "มะนาวโซดา", basePrice: 35, baseCal: 20, img: "https://images.unsplash.com/photo-1558857563-b37102e99e00?auto=format&fit=crop&w=500" }
+                    { id: "b1", name: "ชานมเย็น", basePrice: 45, baseCal: 50, img: "https://images.unsplash.com/photo-1558857563-b37102e99e00?auto=format&fit=crop&w=500" }, // ชาไทย
+                    { id: "b2", name: "น้ำเก๊กฮวยหญ้าหวาน", basePrice: 30, baseCal: 10, img: "" }, // รอใส่ลิงก์รูปเก๊กฮวย
+                    { id: "b3", name: "มะนาวโซดา", basePrice: 35, baseCal: 20, img: "" } // รอใส่ลิงก์รูปมะนาวโซดา
                 ]
             }
         ];
@@ -271,9 +271,12 @@
             menuData.forEach(categoryData => {
                 let html = `<div class="category-block"><h3 class="category-title">${categoryData.category}</h3><div class="menu-grid">`;
                 categoryData.items.forEach(item => {
+                    // หากไม่ได้ใส่ลิงก์รูปภาพไว้ ให้ใช้ภาพ placeholder แสดงคำว่า Wait for Image แทน
+                    const imgSrc = item.img !== "" ? item.img : "https://placehold.co/500x180/eee/a44a3f?text=Wait+for+Image";
+                    
                     html += `
-                        <div class="menu-card" onclick="openModal('${item.id}', '${item.name}', ${item.basePrice}, ${item.baseCal}, '${item.img}')">
-                            <img src="${item.img}" class="menu-img" alt="${item.name}">
+                        <div class="menu-card" onclick="openModal('${item.id}', '${item.name}', ${item.basePrice}, ${item.baseCal}, '${imgSrc}')">
+                            <img src="${imgSrc}" class="menu-img" alt="${item.name}">
                             <div class="menu-info">
                                 <h4 class="menu-name">${item.name}</h4>
                                 <p class="menu-base-price">เริ่มต้น ${item.basePrice} ฿</p>
@@ -333,14 +336,33 @@
             const status = document.getElementById('fb-status');
             btn.innerText = "กำลังส่งข้อมูล...";
             btn.disabled = true;
-            setTimeout(() => {
-                status.innerText = "✅ ส่งข้อเสนอแนะเรียบร้อยแล้ว ขอบคุณที่ร่วมพัฒนา TailorMade Eats ครับ!";
-                status.style.display = "block";
-                btn.innerText = "ส่งข้อเสนอแนะ";
-                btn.disabled = false;
-                document.getElementById('feedbackForm').reset();
-                setTimeout(() => { status.style.display = "none"; }, 3000);
-            }, 1000);
+
+            const formData = new FormData();
+            formData.append('name', document.getElementById('fb-name').value);
+            formData.append('contact', document.getElementById('fb-contact').value);
+            formData.append('message', document.getElementById('fb-message').value);
+
+            // ==============================================================
+            // ⚠️ สำคัญ: เอา URL ของ Google Web App ของคุณมาใส่แทนคำด้านล่างนี้
+            // ==============================================================
+            const scriptURL = 'YOUR_WEB_APP_URL'; 
+
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => {
+                    status.innerText = "✅ ส่งข้อเสนอแนะเรียบร้อยแล้ว ขอบคุณที่ร่วมพัฒนา TailorMade Eats ครับ!";
+                    status.style.display = "block";
+                    btn.innerText = "ส่งข้อเสนอแนะ";
+                    btn.disabled = false;
+                    document.getElementById('feedbackForm').reset();
+                    setTimeout(() => { status.style.display = "none"; }, 4000);
+                })
+                .catch(error => {
+                    status.innerText = "❌ เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง";
+                    status.style.display = "block";
+                    btn.innerText = "ส่งข้อเสนอแนะ";
+                    btn.disabled = false;
+                    console.error('Error!', error.message);
+                });
         }
 
         window.onload = () => { renderMenu(); };
